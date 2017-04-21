@@ -1,0 +1,1757 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/pa11y/pa11y"
+
+    >pa11y (v4.10.0)</a>
+</h1>
+<h4>Pa11y is your automated accessibility testing pal</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pa11y">module pa11y</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.pa11y">
+            function <span class="apidocSignatureSpan"></span>pa11y
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.action">
+            function <span class="apidocSignatureSpan">pa11y.</span>action
+            <span class="apidocSignatureSpan">(browser, page, options, actionString)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.validateAction">
+            function <span class="apidocSignatureSpan">pa11y.</span>validateAction
+            <span class="apidocSignatureSpan">(actionString)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pa11y.</span>cli</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pa11y.</span>csv</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pa11y.</span>defaults</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pa11y.</span>html</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pa11y.</span>json</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pa11y.</span>markdown</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pa11y.</span>tsv</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pa11y.action">module pa11y.action</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.action.action">
+            function <span class="apidocSignatureSpan">pa11y.</span>action
+            <span class="apidocSignatureSpan">(browser, page, options, actionString)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.action.isValidAction">
+            function <span class="apidocSignatureSpan">pa11y.action.</span>isValidAction
+            <span class="apidocSignatureSpan">(actionString)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pa11y.action.</span>allowedActions</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pa11y.cli">module pa11y.cli</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.cli.begin">
+            function <span class="apidocSignatureSpan">pa11y.cli.</span>begin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.cli.debug">
+            function <span class="apidocSignatureSpan">pa11y.cli.</span>debug
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.cli.error">
+            function <span class="apidocSignatureSpan">pa11y.cli.</span>error
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.cli.info">
+            function <span class="apidocSignatureSpan">pa11y.cli.</span>info
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.cli.process">
+            function <span class="apidocSignatureSpan">pa11y.cli.</span>process
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.cli.results">
+            function <span class="apidocSignatureSpan">pa11y.cli.</span>results
+            <span class="apidocSignatureSpan">(results, url)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pa11y.csv">module pa11y.csv</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.csv.begin">
+            function <span class="apidocSignatureSpan">pa11y.csv.</span>begin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.csv.debug">
+            function <span class="apidocSignatureSpan">pa11y.csv.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.csv.error">
+            function <span class="apidocSignatureSpan">pa11y.csv.</span>error
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.csv.info">
+            function <span class="apidocSignatureSpan">pa11y.csv.</span>info
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.csv.process">
+            function <span class="apidocSignatureSpan">pa11y.csv.</span>process
+            <span class="apidocSignatureSpan">(results)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.csv.results">
+            function <span class="apidocSignatureSpan">pa11y.csv.</span>results
+            <span class="apidocSignatureSpan">(results)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pa11y.html">module pa11y.html</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.html.begin">
+            function <span class="apidocSignatureSpan">pa11y.html.</span>begin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.html.debug">
+            function <span class="apidocSignatureSpan">pa11y.html.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.html.error">
+            function <span class="apidocSignatureSpan">pa11y.html.</span>error
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.html.info">
+            function <span class="apidocSignatureSpan">pa11y.html.</span>info
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.html.process">
+            function <span class="apidocSignatureSpan">pa11y.html.</span>process
+            <span class="apidocSignatureSpan">(results, url)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.html.results">
+            function <span class="apidocSignatureSpan">pa11y.html.</span>results
+            <span class="apidocSignatureSpan">(results, url)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pa11y.json">module pa11y.json</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.json.begin">
+            function <span class="apidocSignatureSpan">pa11y.json.</span>begin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.json.debug">
+            function <span class="apidocSignatureSpan">pa11y.json.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.json.error">
+            function <span class="apidocSignatureSpan">pa11y.json.</span>error
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.json.info">
+            function <span class="apidocSignatureSpan">pa11y.json.</span>info
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.json.process">
+            function <span class="apidocSignatureSpan">pa11y.json.</span>process
+            <span class="apidocSignatureSpan">(results)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.json.results">
+            function <span class="apidocSignatureSpan">pa11y.json.</span>results
+            <span class="apidocSignatureSpan">(results)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pa11y.markdown">module pa11y.markdown</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.markdown.begin">
+            function <span class="apidocSignatureSpan">pa11y.markdown.</span>begin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.markdown.debug">
+            function <span class="apidocSignatureSpan">pa11y.markdown.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.markdown.error">
+            function <span class="apidocSignatureSpan">pa11y.markdown.</span>error
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.markdown.info">
+            function <span class="apidocSignatureSpan">pa11y.markdown.</span>info
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.markdown.process">
+            function <span class="apidocSignatureSpan">pa11y.markdown.</span>process
+            <span class="apidocSignatureSpan">(results, url)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.markdown.results">
+            function <span class="apidocSignatureSpan">pa11y.markdown.</span>results
+            <span class="apidocSignatureSpan">(results, url)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pa11y.tsv">module pa11y.tsv</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.tsv.begin">
+            function <span class="apidocSignatureSpan">pa11y.tsv.</span>begin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.tsv.debug">
+            function <span class="apidocSignatureSpan">pa11y.tsv.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.tsv.error">
+            function <span class="apidocSignatureSpan">pa11y.tsv.</span>error
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.tsv.info">
+            function <span class="apidocSignatureSpan">pa11y.tsv.</span>info
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.tsv.process">
+            function <span class="apidocSignatureSpan">pa11y.tsv.</span>process
+            <span class="apidocSignatureSpan">(results)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pa11y.tsv.results">
+            function <span class="apidocSignatureSpan">pa11y.tsv.</span>results
+            <span class="apidocSignatureSpan">(results)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pa11y" id="apidoc.module.pa11y">module pa11y</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.pa11y" id="apidoc.element.pa11y.pa11y">
+        function <span class="apidocSignatureSpan"></span>pa11y
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pa11y(options) {
+	options = defaultOptions(options);
+	if (options.allowedStandards.indexOf(options.standard) === -1) {
+		throw new Error(&#x27;Standard must be one of &#x27; + options.allowedStandards.join(&#x27;, &#x27;));
+	}
+	return truffler(options, testPage);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.action" id="apidoc.element.pa11y.action">
+        function <span class="apidocSignatureSpan">pa11y.</span>action
+        <span class="apidocSignatureSpan">(browser, page, options, actionString)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function buildAction(browser, page, options, actionString) {
+
+	// Find the first action that matches the given action string
+	var actionBuilder = module.exports.allowedActions.find(function(allowedAction) {
+		return allowedAction.match.test(actionString);
+	});
+
+	// Get the action runner, the function that we&#x27;ll
+	// actually run on the page
+	var actionRunner;
+	if (actionBuilder) {
+		actionRunner = actionBuilder.build(browser, page, options, actionString.match(actionBuilder.match));
+	}
+
+	// Return a function which logs and runs the action
+	return function(done) {
+		if (!actionRunner) {
+			return done(new Error(&#x27;Failed action: &#x22;&#x27; + actionString + &#x27;&#x22; cannot be resolved&#x27;));
+		}
+		options.log.debug(&#x27;Running action: &#x27; + actionString);
+		actionRunner(function(error) {
+			if (!error) {
+				options.log.debug(&#x27;  ✔︎ action complete&#x27;);
+			}
+			done(error);
+		});
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.validateAction" id="apidoc.element.pa11y.validateAction">
+        function <span class="apidocSignatureSpan">pa11y.</span>validateAction
+        <span class="apidocSignatureSpan">(actionString)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isValidAction(actionString) {
+	return module.exports.allowedActions.some(function(allowedAction) {
+		return allowedAction.match.test(actionString);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Validating Actions
+
+Pa11y exposes a function which allows you to validate [action](#actions) strings before attempting to use them.
+
+This function accepts an action string and returns a boolean indicating whether it matches one of the actions that Pa11y supports
+:
+
+```js
+pa11y.<span class="apidocCodeKeywordSpan">validateAction</span>(&#x27;click element #submit&#x27;);  // true
+pa11y.validateAction(&#x27;open the pod bay doors&#x27;); // false
+```
+
+
+Configuration
+-------------
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pa11y.action" id="apidoc.module.pa11y.action">module pa11y.action</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.action.action" id="apidoc.element.pa11y.action.action">
+        function <span class="apidocSignatureSpan">pa11y.</span>action
+        <span class="apidocSignatureSpan">(browser, page, options, actionString)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function buildAction(browser, page, options, actionString) {
+
+	// Find the first action that matches the given action string
+	var actionBuilder = module.exports.allowedActions.find(function(allowedAction) {
+		return allowedAction.match.test(actionString);
+	});
+
+	// Get the action runner, the function that we&#x27;ll
+	// actually run on the page
+	var actionRunner;
+	if (actionBuilder) {
+		actionRunner = actionBuilder.build(browser, page, options, actionString.match(actionBuilder.match));
+	}
+
+	// Return a function which logs and runs the action
+	return function(done) {
+		if (!actionRunner) {
+			return done(new Error(&#x27;Failed action: &#x22;&#x27; + actionString + &#x27;&#x22; cannot be resolved&#x27;));
+		}
+		options.log.debug(&#x27;Running action: &#x27; + actionString);
+		actionRunner(function(error) {
+			if (!error) {
+				options.log.debug(&#x27;  ✔︎ action complete&#x27;);
+			}
+			done(error);
+		});
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.action.isValidAction" id="apidoc.element.pa11y.action.isValidAction">
+        function <span class="apidocSignatureSpan">pa11y.action.</span>isValidAction
+        <span class="apidocSignatureSpan">(actionString)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isValidAction(actionString) {
+	return module.exports.allowedActions.some(function(allowedAction) {
+		return allowedAction.match.test(actionString);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pa11y.cli" id="apidoc.module.pa11y.cli">module pa11y.cli</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.cli.begin" id="apidoc.element.pa11y.cli.begin">
+        function <span class="apidocSignatureSpan">pa11y.cli.</span>begin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reportBegin() {
+	console.log(chalk.cyan.underline(&#x27;Welcome to Pa11y&#x27;));
+	console.log(&#x27;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		outputEnvironmentInfo();
+		process.exit(0);
+	}
+	if (!program.url || program.args[1]) {
+		program.help();
+	}
+	var options = processOptions(program);
+	options.log.<span class="apidocCodeKeywordSpan">begin</span>(program.url);
+	try {
+		var test = pa11y(options);
+		test.run(program.url, function(error, results) {
+			if (error) {
+				options.log.error(error.stack);
+				process.exit(1);
+			}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.cli.debug" id="apidoc.element.pa11y.cli.debug">
+        function <span class="apidocSignatureSpan">pa11y.cli.</span>debug
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reportDebug(message) {
+	console.log(start + chalk.gray(&#x27;Debug: &#x27; + message));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+
+	// Return a function which logs and runs the action
+	return function(done) {
+		if (!actionRunner) {
+			return done(new Error(&#x27;Failed action: &#x22;&#x27; + actionString + &#x27;&#x22; cannot be resolved&#x27;));
+		}
+		options.log.<span class="apidocCodeKeywordSpan">debug</span>(&#x27;Running action: &#x27; + actionString);
+		actionRunner(function(error) {
+			if (!error) {
+				options.log.debug(&#x27;  ✔︎ action complete&#x27;);
+			}
+			done(error);
+		});
+	};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.cli.error" id="apidoc.element.pa11y.cli.error">
+        function <span class="apidocSignatureSpan">pa11y.cli.</span>error
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reportError(message) {
+	if (/^error:/i.test(message)) {
+		console.error(message);
+	} else {
+		console.error(start + chalk.red(&#x27;Error: &#x27; + message));
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+	var options = processOptions(program);
+	options.log.begin(program.url);
+	try {
+		var test = pa11y(options);
+		test.run(program.url, function(error, results) {
+			if (error) {
+				options.log.<span class="apidocCodeKeywordSpan">error</span>(error.stack);
+				process.exit(1);
+			}
+			if (reportShouldFail(program.level, results, program.threshold)) {
+				process.once(&#x27;exit&#x27;, function() {
+					process.exit(2);
+				});
+			}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.cli.info" id="apidoc.element.pa11y.cli.info">
+        function <span class="apidocSignatureSpan">pa11y.cli.</span>info
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reportInfo(message) {
+	console.log(start + message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.cli.process" id="apidoc.element.pa11y.cli.process">
+        function <span class="apidocSignatureSpan">pa11y.cli.</span>process
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+If you wish to transform these results with the command-line reporters, then you can do so in your code by requiring them in. The
+ `csv`, `tsv`, `html`, `json`, and `markdown` reporters all expose a `process` method:
+
+```js
+// Assuming you&#x27;ve already run tests, and the results
+// are available in a `results` variable:
+var htmlReporter = require(&#x27;pa11y/reporter/html&#x27;);
+var html = htmlReporter.<span class="apidocCodeKeywordSpan">process</span>(results, url);
+```
+
+### Validating Actions
+
+Pa11y exposes a function which allows you to validate [action](#actions) strings before attempting to use them.
+
+This function accepts an action string and returns a boolean indicating whether it matches one of the actions that Pa11y supports
+:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.cli.results" id="apidoc.element.pa11y.cli.results">
+        function <span class="apidocSignatureSpan">pa11y.cli.</span>results
+        <span class="apidocSignatureSpan">(results, url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reportResults(results, url) {
+	console.log(&#x27;\n&#x27; + chalk.underline(&#x27;Results for &#x27; + url + &#x27;:&#x27;));
+	if (results.length === 0) {
+		return console.log(&#x27;\n&#x27; + chalk.green(&#x27;No errors found!&#x27;) + &#x27;\n&#x27;);
+	}
+	results.forEach(reportResult);
+	console.log(&#x27;&#x27;);
+	reportTotals(results);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				process.exit(1);
+			}
+			if (reportShouldFail(program.level, results, program.threshold)) {
+				process.once(&#x27;exit&#x27;, function() {
+					process.exit(2);
+				});
+			}
+			options.log.<span class="apidocCodeKeywordSpan">results</span>(results, program.url);
+		});
+	} catch (error) {
+		options.log.error(error.stack);
+		process.exit(1);
+	}
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pa11y.csv" id="apidoc.module.pa11y.csv">module pa11y.csv</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.csv.begin" id="apidoc.element.pa11y.csv.begin">
+        function <span class="apidocSignatureSpan">pa11y.csv.</span>begin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		outputEnvironmentInfo();
+		process.exit(0);
+	}
+	if (!program.url || program.args[1]) {
+		program.help();
+	}
+	var options = processOptions(program);
+	options.log.<span class="apidocCodeKeywordSpan">begin</span>(program.url);
+	try {
+		var test = pa11y(options);
+		test.run(program.url, function(error, results) {
+			if (error) {
+				options.log.error(error.stack);
+				process.exit(1);
+			}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.csv.debug" id="apidoc.element.pa11y.csv.debug">
+        function <span class="apidocSignatureSpan">pa11y.csv.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+
+	// Return a function which logs and runs the action
+	return function(done) {
+		if (!actionRunner) {
+			return done(new Error(&#x27;Failed action: &#x22;&#x27; + actionString + &#x27;&#x22; cannot be resolved&#x27;));
+		}
+		options.log.<span class="apidocCodeKeywordSpan">debug</span>(&#x27;Running action: &#x27; + actionString);
+		actionRunner(function(error) {
+			if (!error) {
+				options.log.debug(&#x27;  ✔︎ action complete&#x27;);
+			}
+			done(error);
+		});
+	};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.csv.error" id="apidoc.element.pa11y.csv.error">
+        function <span class="apidocSignatureSpan">pa11y.csv.</span>error
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reportError(message) {
+	console.error(message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+	var options = processOptions(program);
+	options.log.begin(program.url);
+	try {
+		var test = pa11y(options);
+		test.run(program.url, function(error, results) {
+			if (error) {
+				options.log.<span class="apidocCodeKeywordSpan">error</span>(error.stack);
+				process.exit(1);
+			}
+			if (reportShouldFail(program.level, results, program.threshold)) {
+				process.once(&#x27;exit&#x27;, function() {
+					process.exit(2);
+				});
+			}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.csv.info" id="apidoc.element.pa11y.csv.info">
+        function <span class="apidocSignatureSpan">pa11y.csv.</span>info
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.csv.process" id="apidoc.element.pa11y.csv.process">
+        function <span class="apidocSignatureSpan">pa11y.csv.</span>process
+        <span class="apidocSignatureSpan">(results)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function buildCsv(results) {
+	return [&#x27;&#x22;type&#x22;,&#x22;code&#x22;,&#x22;message&#x22;,&#x22;context&#x22;,&#x22;selector&#x22;&#x27;]
+		.concat(results.map(buildCsvRow))
+		.join(&#x27;\n&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+If you wish to transform these results with the command-line reporters, then you can do so in your code by requiring them in. The
+ `csv`, `tsv`, `html`, `json`, and `markdown` reporters all expose a `process` method:
+
+```js
+// Assuming you&#x27;ve already run tests, and the results
+// are available in a `results` variable:
+var htmlReporter = require(&#x27;pa11y/reporter/html&#x27;);
+var html = htmlReporter.<span class="apidocCodeKeywordSpan">process</span>(results, url);
+```
+
+### Validating Actions
+
+Pa11y exposes a function which allows you to validate [action](#actions) strings before attempting to use them.
+
+This function accepts an action string and returns a boolean indicating whether it matches one of the actions that Pa11y supports
+:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.csv.results" id="apidoc.element.pa11y.csv.results">
+        function <span class="apidocSignatureSpan">pa11y.csv.</span>results
+        <span class="apidocSignatureSpan">(results)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reportResults(results) {
+	console.log(buildCsv(results));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				process.exit(1);
+			}
+			if (reportShouldFail(program.level, results, program.threshold)) {
+				process.once(&#x27;exit&#x27;, function() {
+					process.exit(2);
+				});
+			}
+			options.log.<span class="apidocCodeKeywordSpan">results</span>(results, program.url);
+		});
+	} catch (error) {
+		options.log.error(error.stack);
+		process.exit(1);
+	}
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pa11y.html" id="apidoc.module.pa11y.html">module pa11y.html</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.html.begin" id="apidoc.element.pa11y.html.begin">
+        function <span class="apidocSignatureSpan">pa11y.html.</span>begin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		outputEnvironmentInfo();
+		process.exit(0);
+	}
+	if (!program.url || program.args[1]) {
+		program.help();
+	}
+	var options = processOptions(program);
+	options.log.<span class="apidocCodeKeywordSpan">begin</span>(program.url);
+	try {
+		var test = pa11y(options);
+		test.run(program.url, function(error, results) {
+			if (error) {
+				options.log.error(error.stack);
+				process.exit(1);
+			}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.html.debug" id="apidoc.element.pa11y.html.debug">
+        function <span class="apidocSignatureSpan">pa11y.html.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+
+	// Return a function which logs and runs the action
+	return function(done) {
+		if (!actionRunner) {
+			return done(new Error(&#x27;Failed action: &#x22;&#x27; + actionString + &#x27;&#x22; cannot be resolved&#x27;));
+		}
+		options.log.<span class="apidocCodeKeywordSpan">debug</span>(&#x27;Running action: &#x27; + actionString);
+		actionRunner(function(error) {
+			if (!error) {
+				options.log.debug(&#x27;  ✔︎ action complete&#x27;);
+			}
+			done(error);
+		});
+	};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.html.error" id="apidoc.element.pa11y.html.error">
+        function <span class="apidocSignatureSpan">pa11y.html.</span>error
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reportError(message) {
+	console.error(message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+	var options = processOptions(program);
+	options.log.begin(program.url);
+	try {
+		var test = pa11y(options);
+		test.run(program.url, function(error, results) {
+			if (error) {
+				options.log.<span class="apidocCodeKeywordSpan">error</span>(error.stack);
+				process.exit(1);
+			}
+			if (reportShouldFail(program.level, results, program.threshold)) {
+				process.once(&#x27;exit&#x27;, function() {
+					process.exit(2);
+				});
+			}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.html.info" id="apidoc.element.pa11y.html.info">
+        function <span class="apidocSignatureSpan">pa11y.html.</span>info
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.html.process" id="apidoc.element.pa11y.html.process">
+        function <span class="apidocSignatureSpan">pa11y.html.</span>process
+        <span class="apidocSignatureSpan">(results, url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function buildHtml(results, url) {
+	var renderMain = template(path.join(__dirname, &#x27;/html/report.html&#x27;));
+	return renderMain({
+		date: new Date(),
+		errorCount: results.filter(isError).length,
+		warningCount: results.filter(isWarning).length,
+		noticeCount: results.filter(isNotice).length,
+		results: buildResultsHtml(results),
+		url: url
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+If you wish to transform these results with the command-line reporters, then you can do so in your code by requiring them in. The
+ `csv`, `tsv`, `html`, `json`, and `markdown` reporters all expose a `process` method:
+
+```js
+// Assuming you&#x27;ve already run tests, and the results
+// are available in a `results` variable:
+var htmlReporter = require(&#x27;pa11y/reporter/html&#x27;);
+var html = htmlReporter.<span class="apidocCodeKeywordSpan">process</span>(results, url);
+```
+
+### Validating Actions
+
+Pa11y exposes a function which allows you to validate [action](#actions) strings before attempting to use them.
+
+This function accepts an action string and returns a boolean indicating whether it matches one of the actions that Pa11y supports
+:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.html.results" id="apidoc.element.pa11y.html.results">
+        function <span class="apidocSignatureSpan">pa11y.html.</span>results
+        <span class="apidocSignatureSpan">(results, url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reportResults(results, url) {
+	console.log(buildHtml(results, url));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				process.exit(1);
+			}
+			if (reportShouldFail(program.level, results, program.threshold)) {
+				process.once(&#x27;exit&#x27;, function() {
+					process.exit(2);
+				});
+			}
+			options.log.<span class="apidocCodeKeywordSpan">results</span>(results, program.url);
+		});
+	} catch (error) {
+		options.log.error(error.stack);
+		process.exit(1);
+	}
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pa11y.json" id="apidoc.module.pa11y.json">module pa11y.json</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.json.begin" id="apidoc.element.pa11y.json.begin">
+        function <span class="apidocSignatureSpan">pa11y.json.</span>begin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		outputEnvironmentInfo();
+		process.exit(0);
+	}
+	if (!program.url || program.args[1]) {
+		program.help();
+	}
+	var options = processOptions(program);
+	options.log.<span class="apidocCodeKeywordSpan">begin</span>(program.url);
+	try {
+		var test = pa11y(options);
+		test.run(program.url, function(error, results) {
+			if (error) {
+				options.log.error(error.stack);
+				process.exit(1);
+			}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.json.debug" id="apidoc.element.pa11y.json.debug">
+        function <span class="apidocSignatureSpan">pa11y.json.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+
+	// Return a function which logs and runs the action
+	return function(done) {
+		if (!actionRunner) {
+			return done(new Error(&#x27;Failed action: &#x22;&#x27; + actionString + &#x27;&#x22; cannot be resolved&#x27;));
+		}
+		options.log.<span class="apidocCodeKeywordSpan">debug</span>(&#x27;Running action: &#x27; + actionString);
+		actionRunner(function(error) {
+			if (!error) {
+				options.log.debug(&#x27;  ✔︎ action complete&#x27;);
+			}
+			done(error);
+		});
+	};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.json.error" id="apidoc.element.pa11y.json.error">
+        function <span class="apidocSignatureSpan">pa11y.json.</span>error
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reportError(message) {
+	console.error(message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+	var options = processOptions(program);
+	options.log.begin(program.url);
+	try {
+		var test = pa11y(options);
+		test.run(program.url, function(error, results) {
+			if (error) {
+				options.log.<span class="apidocCodeKeywordSpan">error</span>(error.stack);
+				process.exit(1);
+			}
+			if (reportShouldFail(program.level, results, program.threshold)) {
+				process.once(&#x27;exit&#x27;, function() {
+					process.exit(2);
+				});
+			}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.json.info" id="apidoc.element.pa11y.json.info">
+        function <span class="apidocSignatureSpan">pa11y.json.</span>info
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.json.process" id="apidoc.element.pa11y.json.process">
+        function <span class="apidocSignatureSpan">pa11y.json.</span>process
+        <span class="apidocSignatureSpan">(results)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function buildJson(results) {
+	return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+If you wish to transform these results with the command-line reporters, then you can do so in your code by requiring them in. The
+ `csv`, `tsv`, `html`, `json`, and `markdown` reporters all expose a `process` method:
+
+```js
+// Assuming you&#x27;ve already run tests, and the results
+// are available in a `results` variable:
+var htmlReporter = require(&#x27;pa11y/reporter/html&#x27;);
+var html = htmlReporter.<span class="apidocCodeKeywordSpan">process</span>(results, url);
+```
+
+### Validating Actions
+
+Pa11y exposes a function which allows you to validate [action](#actions) strings before attempting to use them.
+
+This function accepts an action string and returns a boolean indicating whether it matches one of the actions that Pa11y supports
+:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.json.results" id="apidoc.element.pa11y.json.results">
+        function <span class="apidocSignatureSpan">pa11y.json.</span>results
+        <span class="apidocSignatureSpan">(results)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reportResults(results) {
+	var stream = bfj.streamify(results);
+	stream.on(&#x27;dataError&#x27;, function(error) {
+		reportError(error.message);
+	});
+	stream.on(&#x27;end&#x27;, function() {
+		process.stdout.write(&#x27;\n&#x27;);
+	});
+	stream.pipe(process.stdout);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				process.exit(1);
+			}
+			if (reportShouldFail(program.level, results, program.threshold)) {
+				process.once(&#x27;exit&#x27;, function() {
+					process.exit(2);
+				});
+			}
+			options.log.<span class="apidocCodeKeywordSpan">results</span>(results, program.url);
+		});
+	} catch (error) {
+		options.log.error(error.stack);
+		process.exit(1);
+	}
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pa11y.markdown" id="apidoc.module.pa11y.markdown">module pa11y.markdown</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.markdown.begin" id="apidoc.element.pa11y.markdown.begin">
+        function <span class="apidocSignatureSpan">pa11y.markdown.</span>begin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		outputEnvironmentInfo();
+		process.exit(0);
+	}
+	if (!program.url || program.args[1]) {
+		program.help();
+	}
+	var options = processOptions(program);
+	options.log.<span class="apidocCodeKeywordSpan">begin</span>(program.url);
+	try {
+		var test = pa11y(options);
+		test.run(program.url, function(error, results) {
+			if (error) {
+				options.log.error(error.stack);
+				process.exit(1);
+			}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.markdown.debug" id="apidoc.element.pa11y.markdown.debug">
+        function <span class="apidocSignatureSpan">pa11y.markdown.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+
+	// Return a function which logs and runs the action
+	return function(done) {
+		if (!actionRunner) {
+			return done(new Error(&#x27;Failed action: &#x22;&#x27; + actionString + &#x27;&#x22; cannot be resolved&#x27;));
+		}
+		options.log.<span class="apidocCodeKeywordSpan">debug</span>(&#x27;Running action: &#x27; + actionString);
+		actionRunner(function(error) {
+			if (!error) {
+				options.log.debug(&#x27;  ✔︎ action complete&#x27;);
+			}
+			done(error);
+		});
+	};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.markdown.error" id="apidoc.element.pa11y.markdown.error">
+        function <span class="apidocSignatureSpan">pa11y.markdown.</span>error
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reportError(message) {
+	console.error(message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+	var options = processOptions(program);
+	options.log.begin(program.url);
+	try {
+		var test = pa11y(options);
+		test.run(program.url, function(error, results) {
+			if (error) {
+				options.log.<span class="apidocCodeKeywordSpan">error</span>(error.stack);
+				process.exit(1);
+			}
+			if (reportShouldFail(program.level, results, program.threshold)) {
+				process.once(&#x27;exit&#x27;, function() {
+					process.exit(2);
+				});
+			}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.markdown.info" id="apidoc.element.pa11y.markdown.info">
+        function <span class="apidocSignatureSpan">pa11y.markdown.</span>info
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.markdown.process" id="apidoc.element.pa11y.markdown.process">
+        function <span class="apidocSignatureSpan">pa11y.markdown.</span>process
+        <span class="apidocSignatureSpan">(results, url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function buildMarkdown(results, url) {
+	var lines = [
+		&#x27;# Welcome to Pa11y\n&#x27;,
+		&#x27;## Results for &#x27; + url + &#x27;:&#x27;
+	];
+	if (results.length === 0) {
+		lines.push(&#x27;\n * No errors found!&#x27;);
+	} else {
+		lines.push(buildResultsMarkdown(results));
+		lines.push(buildTotalsMarkdown(results));
+	}
+	return lines.join(&#x27;\n&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+If you wish to transform these results with the command-line reporters, then you can do so in your code by requiring them in. The
+ `csv`, `tsv`, `html`, `json`, and `markdown` reporters all expose a `process` method:
+
+```js
+// Assuming you&#x27;ve already run tests, and the results
+// are available in a `results` variable:
+var htmlReporter = require(&#x27;pa11y/reporter/html&#x27;);
+var html = htmlReporter.<span class="apidocCodeKeywordSpan">process</span>(results, url);
+```
+
+### Validating Actions
+
+Pa11y exposes a function which allows you to validate [action](#actions) strings before attempting to use them.
+
+This function accepts an action string and returns a boolean indicating whether it matches one of the actions that Pa11y supports
+:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.markdown.results" id="apidoc.element.pa11y.markdown.results">
+        function <span class="apidocSignatureSpan">pa11y.markdown.</span>results
+        <span class="apidocSignatureSpan">(results, url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reportResults(results, url) {
+	console.log(buildMarkdown(results, url));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				process.exit(1);
+			}
+			if (reportShouldFail(program.level, results, program.threshold)) {
+				process.once(&#x27;exit&#x27;, function() {
+					process.exit(2);
+				});
+			}
+			options.log.<span class="apidocCodeKeywordSpan">results</span>(results, program.url);
+		});
+	} catch (error) {
+		options.log.error(error.stack);
+		process.exit(1);
+	}
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pa11y.tsv" id="apidoc.module.pa11y.tsv">module pa11y.tsv</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.tsv.begin" id="apidoc.element.pa11y.tsv.begin">
+        function <span class="apidocSignatureSpan">pa11y.tsv.</span>begin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		outputEnvironmentInfo();
+		process.exit(0);
+	}
+	if (!program.url || program.args[1]) {
+		program.help();
+	}
+	var options = processOptions(program);
+	options.log.<span class="apidocCodeKeywordSpan">begin</span>(program.url);
+	try {
+		var test = pa11y(options);
+		test.run(program.url, function(error, results) {
+			if (error) {
+				options.log.error(error.stack);
+				process.exit(1);
+			}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.tsv.debug" id="apidoc.element.pa11y.tsv.debug">
+        function <span class="apidocSignatureSpan">pa11y.tsv.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+
+	// Return a function which logs and runs the action
+	return function(done) {
+		if (!actionRunner) {
+			return done(new Error(&#x27;Failed action: &#x22;&#x27; + actionString + &#x27;&#x22; cannot be resolved&#x27;));
+		}
+		options.log.<span class="apidocCodeKeywordSpan">debug</span>(&#x27;Running action: &#x27; + actionString);
+		actionRunner(function(error) {
+			if (!error) {
+				options.log.debug(&#x27;  ✔︎ action complete&#x27;);
+			}
+			done(error);
+		});
+	};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.tsv.error" id="apidoc.element.pa11y.tsv.error">
+        function <span class="apidocSignatureSpan">pa11y.tsv.</span>error
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reportError(message) {
+	console.error(message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+	var options = processOptions(program);
+	options.log.begin(program.url);
+	try {
+		var test = pa11y(options);
+		test.run(program.url, function(error, results) {
+			if (error) {
+				options.log.<span class="apidocCodeKeywordSpan">error</span>(error.stack);
+				process.exit(1);
+			}
+			if (reportShouldFail(program.level, results, program.threshold)) {
+				process.once(&#x27;exit&#x27;, function() {
+					process.exit(2);
+				});
+			}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.tsv.info" id="apidoc.element.pa11y.tsv.info">
+        function <span class="apidocSignatureSpan">pa11y.tsv.</span>info
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.tsv.process" id="apidoc.element.pa11y.tsv.process">
+        function <span class="apidocSignatureSpan">pa11y.tsv.</span>process
+        <span class="apidocSignatureSpan">(results)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function buildTsv(results) {
+	return [[&#x27;type&#x27;, &#x27;code&#x27;, &#x27;message&#x27;, &#x27;context&#x27;, &#x27;selector&#x27;].join(&#x27;\t&#x27;)]
+		.concat(results.map(buildTsvRow))
+		.join(&#x27;\n&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+If you wish to transform these results with the command-line reporters, then you can do so in your code by requiring them in. The
+ `csv`, `tsv`, `html`, `json`, and `markdown` reporters all expose a `process` method:
+
+```js
+// Assuming you&#x27;ve already run tests, and the results
+// are available in a `results` variable:
+var htmlReporter = require(&#x27;pa11y/reporter/html&#x27;);
+var html = htmlReporter.<span class="apidocCodeKeywordSpan">process</span>(results, url);
+```
+
+### Validating Actions
+
+Pa11y exposes a function which allows you to validate [action](#actions) strings before attempting to use them.
+
+This function accepts an action string and returns a boolean indicating whether it matches one of the actions that Pa11y supports
+:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pa11y.tsv.results" id="apidoc.element.pa11y.tsv.results">
+        function <span class="apidocSignatureSpan">pa11y.tsv.</span>results
+        <span class="apidocSignatureSpan">(results)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reportResults(results) {
+	console.log(buildTsv(results));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				process.exit(1);
+			}
+			if (reportShouldFail(program.level, results, program.threshold)) {
+				process.once(&#x27;exit&#x27;, function() {
+					process.exit(2);
+				});
+			}
+			options.log.<span class="apidocCodeKeywordSpan">results</span>(results, program.url);
+		});
+	} catch (error) {
+		options.log.error(error.stack);
+		process.exit(1);
+	}
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
